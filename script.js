@@ -86,4 +86,59 @@ const students = [
 ];
 
 const student = students.filter((student) => student.score > 80);
-console.log(student);
+// console.log(student);
+
+// 10. Write an ES6 function that takes an array of objects with the properties name, age and city, and
+// returns an array with only the objects that have a city property of "Indore" and age greater than
+// 70.
+
+const peopless = [
+  { name: "Ridhima", age: 75, city: "Indore" },
+  { name: "Akshay", age: 60, city: "Delhi" },
+  { name: "Udit", age: 80, city: "Indore" },
+  { name: "Venki", age: 80, city: "Bangalore" },
+];
+
+const filterPeople = peopless.filter(
+  (people) => people.city === "Indore" && people.age > 70
+);
+// console.log(filterPeople);
+
+// 11. Write an ES6 function that takes an array of objects containing book information (title, author,
+//   genre) and returns an array with only the books of "Science Fiction".
+
+const books = [
+  {
+    title: "The Hitchhiker's Guide to the Galaxy",
+    author: "Douglas Adams",
+    genre: "Science Fiction",
+  },
+  {
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    genre: "Fiction",
+  },
+  { title: "1984", author: "George Orwell", genre: "Science Fiction" },
+  { title: "Pride and Prejudice", author: "Jane Austen", genre: "Romance" },
+];
+
+const filterScienceBook = books.filter(
+  (Book) => Book.genre.includes('Fiction')
+);
+console.log(filterScienceBook);
+
+// 12. Write an ES6 function that takes an array of objects containing employee information (name,
+//   age, salary) and returns an array with only the employees who earn a salary above 22000 and
+//   age is above 25.
+
+const employees = [
+  { name: "Abhay", age: 25, salary: 20000 },
+  { name: "Joice", age: 30, salary: 35000 },
+  { name: "Reena", age: 35, salary: 15000 },
+  { name: "Jeena", age: 40, salary: 50000 },
+];
+
+const filterEmployee = employees.filter(
+  (Employee) => Employee.salary > 22000 && Employee.age > 25
+);
+// console.log(filterEmployee);
